@@ -11,9 +11,15 @@ minToSec(2) ➞ 120
 */
 
 // - Write a Function Decleration for above problem
+/*
 function minToSec() {
   // Your code
+  let minute =prompt("enter the minutes:");
+  let seconds =minute *60;
+  alert(`seconds = ${seconds}`);
 }
+minToSec();
+*/
 // - Execute the function with required parameter
 
 /* 2. 
@@ -63,11 +69,25 @@ Create a function that take the age are return the appropiate drink based on the
 - 21 years or older — return "drink throat-piercing vodka"
 
 */
-
+/*
 function appropiateDrinks() {
   // Your code
+  let age = prompt("enter your age");
+  if(age <=14){
+    alert("drink fruit juice");
+  }
+  else if(age <=18){
+    alert(`drnk soda`);
+  }
+  else if(age<=21){
+    alert("drink fruit-flavored beer");
+  }
+  else{
+    alert(`drink throat-piercing vodka`);
+  }
 }
-
+appropiateDrinks();
+*/
 /* 4. Add two numers or string
 
 Write a function that accepts two numbers or string and returns the sum of the numbers and concatenation of the strings.
@@ -81,7 +101,23 @@ Twist is when user passes anything other than number, or string value you should
 
 function sum() {
   // Your code
+  var char =prompt("enter 1 ");
+  var numb =prompt("enter 2");
+  let add = 0;
+  if (typeof char == Number || typeof numb == Number){
+    add = char + numb;
+    
+  }
+  else if (typeof char == "string" || typeof numb == "string"){
+    add = char + numb;
+    alert(add);
+  }
+  else {
+    return`invalid`;
+    alert("Invalid");
+  }
 }
+sum();
 
 // Function Test
 sum(2, 4); // 4
